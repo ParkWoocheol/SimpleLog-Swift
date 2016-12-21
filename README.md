@@ -22,7 +22,7 @@ pod "SimpleLog-Swift"
 
 ## Author
 
-Woocheol Park, magic1wp@naver.com
+Woocheol Park, admin@mrparkwc.com
 
 ## License
 
