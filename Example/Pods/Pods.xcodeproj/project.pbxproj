@@ -14,7 +14,7 @@
 		8F64DDA8E613AEDF6E81C3080F3D441E /* Pods-SimpleLog-Swift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FB73ABF6A09855C4EECF56F53DAEDD /* Pods-SimpleLog-Swift_Example-dummy.m */; };
 		918987DB81E03241A6715F75E5304741 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		D8FF90EEBD2B7EBD301B61EBAA14271D /* Pods-SimpleLog-Swift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C1EF7254B6E258029E5B0055DDD2D6 /* Pods-SimpleLog-Swift_Tests-dummy.m */; };
-		E52A04B23E64FE2956128FFBFCAD7EDD /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B741185EF846FE38AAAB0AD352289 /* ReplaceMe.swift */; };
+		E52A04B23E64FE2956128FFBFCAD7EDD /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B741185EF846FE38AAAB0AD352289 /* Logging.swift */; };
 		F89C008E2CBFEC14DC0B3EF2CF347B24 /* Pods-SimpleLog-Swift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2D4B07281B1245DA8A7A3A3D19E3BD9 /* Pods-SimpleLog-Swift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA26BF2DFB8218B62E01CE0FF25DFDA3 /* SimpleLog-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FD5156EE6683A94368B780EA640BD /* SimpleLog-Swift-dummy.m */; };
 /* End PBXBuildFile section */
@@ -41,7 +41,7 @@
 		4039E97764B6F44B97AEEAD90FF8E20D /* SimpleLog-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SimpleLog-Swift.xcconfig"; sourceTree = "<group>"; };
 		51F1BEF2F8E338A378B30A0AD567ECA1 /* Pods-SimpleLog-Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleLog-Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		57836EA95E0F3115541C4B377175EFAA /* Pods-SimpleLog-Swift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleLog-Swift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		613B741185EF846FE38AAAB0AD352289 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		613B741185EF846FE38AAAB0AD352289 /* Logging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		6BB67661F56767281A54077781421F2B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		881177631E8859CFB22DE8E71B86A303 /* Pods-SimpleLog-Swift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleLog-Swift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		90C1EF7254B6E258029E5B0055DDD2D6 /* Pods-SimpleLog-Swift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleLog-Swift_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		A13FEBAD9916C2790B8E0C0CE6E05E82 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				613B741185EF846FE38AAAB0AD352289 /* ReplaceMe.swift */,
+				613B741185EF846FE38AAAB0AD352289 /* Logging.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -361,7 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E52A04B23E64FE2956128FFBFCAD7EDD /* ReplaceMe.swift in Sources */,
+				E52A04B23E64FE2956128FFBFCAD7EDD /* Logging.swift in Sources */,
 				FA26BF2DFB8218B62E01CE0FF25DFDA3 /* SimpleLog-Swift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
