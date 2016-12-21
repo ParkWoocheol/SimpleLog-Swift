@@ -1,0 +1,22 @@
+{
+  "name": "SimpleLog-Swift",
+  "version": "0.1.0",
+  "summary": "A short description of SimpleLog-Swift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SimpleLog-Swift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Woocheol Park": "magic1wp@naver.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SimpleLog-Swift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SimpleLog-Swift/Classes/**/*"
+}

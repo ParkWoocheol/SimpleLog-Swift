@@ -1,0 +1,16 @@
+PODS:
+  - SimpleLog-Swift (0.1.0)
+
+DEPENDENCIES:
+  - SimpleLog-Swift (from `../`)
+
+EXTERNAL SOURCES:
+  SimpleLog-Swift:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SimpleLog-Swift: 3a488a266cc0721a568d0f6df9d61ed14abffc71
+
+PODFILE CHECKSUM: d9e5eb09f5db46dbacec629339825e148268f807
+
+COCOAPODS: 1.1.1

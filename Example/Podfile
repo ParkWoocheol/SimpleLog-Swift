@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SimpleLog-Swift_Example' do
+  pod 'SimpleLog-Swift', :path => '../'
+
+  target 'SimpleLog-Swift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
