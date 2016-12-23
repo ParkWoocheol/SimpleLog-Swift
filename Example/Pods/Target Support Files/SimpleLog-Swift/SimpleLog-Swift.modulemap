@@ -1,6 +1,0 @@
-framework module SimpleLog_Swift {
-  umbrella header "SimpleLog-Swift-umbrella.h"
-
-  export *
-  module * { export * }
-}
