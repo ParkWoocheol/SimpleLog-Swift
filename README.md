@@ -5,12 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/SimpleLog-Swift.svg?style=flat)](http://cocoapods.org/pods/SimpleLog-Swift)
 [![Platform](https://img.shields.io/cocoapods/p/SimpleLog-Swift.svg?style=flat)](http://cocoapods.org/pods/SimpleLog-Swift)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
 ## Installation
 
 SimpleLog-Swift is available through [CocoaPods](http://cocoapods.org). To install
@@ -19,6 +13,23 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "SimpleLog-Swift"
 ```
+
+## Example
+
+```swift
+import SimpleLog_Swift
+  
+     Logging.d(message: "message")
+     Logging.d(tag: "tag name", message: "message")
+     ...
+     Logging.i
+     ...
+     Logging.w
+     ...
+     Logging.e
+     
+```
+
 
 ## Author
 
