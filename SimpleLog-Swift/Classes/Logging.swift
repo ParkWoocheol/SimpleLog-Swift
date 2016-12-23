@@ -28,36 +28,36 @@ public enum LogSeparator: String{
 
 public class Logging{
     
-    public static func d(message: String, function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .DEBUG, logMessage: "FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    public static func d(message: String, file: String = #file, function: String = #function, line: Int = #line){
+        logMessagePrint(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func d(tag: String, message: String, line: Int = #line){
-        logMessagePrint(separator: .DEBUG, logMessage: "TAG: \(tag), LINE: \(line), MESSAGE: \(message)")
+    public static func d(tag: String, message: String,function: String = #function, line: Int = #line){
+        logMessagePrint(separator: .DEBUG, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func i(message: String, function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .INFO, logMessage: "FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    public static func i(message: String, file: String = #file, function: String = #function, line: Int = #line){
+        logMessagePrint(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func i(tag: String, message: String, line: Int = #line){
-        logMessagePrint(separator: .INFO, logMessage: "TAG: \(tag), LINE: \(line), MESSAGE: \(message)")
+    public static func i(tag: String, message: String,function: String = #function, line: Int = #line){
+        logMessagePrint(separator: .INFO, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func w(message: String, function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .WARN, logMessage: "FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    public static func w(message: String, file: String = #file, function: String = #function, line: Int = #line){
+        logMessagePrint(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func w(tag: String, message: String, line: Int = #line){
-        logMessagePrint(separator: .WARN, logMessage: "TAG: \(tag), LINE: \(line), MESSAGE: \(message)")
+    public static func w(tag: String, message: String,function: String = #function, line: Int = #line){
+        logMessagePrint(separator: .WARN, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func e(message: String, function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .ERROR, logMessage: "FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    public static func e(message: String, file: String = #file, function: String = #function, line: Int = #line){
+        logMessagePrint(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func e(tag: String, message: String, line: Int = #line){
-        logMessagePrint(separator: .ERROR, logMessage: "TAG: \(tag), LINE: \(line), MESSAGE: \(message)")
+    public static func e(tag: String, message: String,function: String = #function, line: Int = #line){
+        logMessagePrint(separator: .ERROR, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
     public static func logMessagePrint(separator: LogSeparator,logMessage: String){
@@ -65,3 +65,6 @@ public class Logging{
     }
     
 }
+
+
+
