@@ -32,12 +32,14 @@ Logging.d(message: "description")
 // | DEBUG | TAG: TEST, FUNCTION: exampleFunction, LINE: 31, MESSAGE: description
 Logging.d(tag: "tag name", message: "description")
 
-...
 Logging.i()
 ...
+
 Logging.w()
 ...
+
 Logging.e()
+...
      
 ```
 
