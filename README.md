@@ -18,15 +18,26 @@ pod "SimpleLog-Swift"
 
 ```swift
 import SimpleLog_Swift
-  
-     Logging.d(message: "message")
-     Logging.d(tag: "tag name", message: "message")
-     ...
-     Logging.i
-     ...
-     Logging.w
-     ...
-     Logging.e
+
+
+// Print command line
+// | DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 29
+Logging.d(message: "message")
+
+// Print command line
+// | DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30, MESSAGE: contents of explanation
+Logging.d(message: "message")
+
+// Print command line
+// | DEBUG | TAG: TEST, FUNCTION: exampleFunction, LINE: 31, MESSAGE: contents of explanation
+Logging.d(tag: "tag name", message: "message")
+
+...
+Logging.i()
+...
+Logging.w()
+...
+Logging.e()
      
 ```
 
