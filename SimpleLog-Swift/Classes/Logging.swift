@@ -20,10 +20,10 @@
 
 
 public enum LogSeparator: String{
-    case DEBUG = "DEBUG"
-    case INFO = "INFO"
-    case WARN = "WARN"
-    case ERROR = "ERROR"
+    case DEBUG = "📘 DEBUG"
+    case INFO = "📗 INFO"
+    case WARN = "📒 WARN"
+    case ERROR = "📕 ERROR"
 }
 
 public class Logging{
@@ -32,11 +32,11 @@ public class Logging{
         logMessagePrint(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
     }
     
-    public static func d(message: String, file: String = #file, function: String = #function, line: Int = #line){
+    public static func d(message: Any..., file: String = #file, function: String = #function, line: Int = #line){
         logMessagePrint(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func d(tag: String, message: String,function: String = #function, line: Int = #line){
+    public static func d(tag: String, message: Any...,function: String = #function, line: Int = #line){
         logMessagePrint(separator: .DEBUG, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
@@ -44,11 +44,11 @@ public class Logging{
         logMessagePrint(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
     }
     
-    public static func i(message: String, file: String = #file, function: String = #function, line: Int = #line){
+    public static func i(message: Any..., file: String = #file, function: String = #function, line: Int = #line){
         logMessagePrint(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func i(tag: String, message: String,function: String = #function, line: Int = #line){
+    public static func i(tag: String, message: Any...,function: String = #function, line: Int = #line){
         logMessagePrint(separator: .INFO, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
@@ -56,11 +56,11 @@ public class Logging{
         logMessagePrint(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
     }
     
-    public static func w(message: String, file: String = #file, function: String = #function, line: Int = #line){
+    public static func w(message: Any..., file: String = #file, function: String = #function, line: Int = #line){
         logMessagePrint(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func w(tag: String, message: String,function: String = #function, line: Int = #line){
+    public static func w(tag: String, message: Any...,function: String = #function, line: Int = #line){
         logMessagePrint(separator: .WARN, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
@@ -68,15 +68,15 @@ public class Logging{
         logMessagePrint(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
     }
     
-    public static func e(message: String, file: String = #file, function: String = #function, line: Int = #line){
+    public static func e(message: Any..., file: String = #file, function: String = #function, line: Int = #line){
         logMessagePrint(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func e(tag: String, message: String,function: String = #function, line: Int = #line){
+    public static func e(tag: String, message: Any...,function: String = #function, line: Int = #line){
         logMessagePrint(separator: .ERROR, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func logMessagePrint(separator: LogSeparator,logMessage: String){
+    public static func logMessagePrint(separator: LogSeparator,logMessage: Any...){
         print("| \(separator.rawValue) | \(logMessage)")
     }
     
