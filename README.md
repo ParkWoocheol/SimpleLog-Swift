@@ -20,6 +20,10 @@ pod "SimpleLog-Swift"
 import SimpleLog_Swift
 
 // Print command line
+// | DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30, MESSAGE:
+Logging.d()
+
+// Print command line
 // | DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30, MESSAGE: description
 Logging.d(message: "description")
 
