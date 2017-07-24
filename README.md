@@ -46,13 +46,13 @@ Logging.d(description)
 // ---------------------------------------------------------
 Logging.d(array as Array<Any>)
 
-Logging.i(message: "description")
+Logging.i()
 ...
 
-Logging.w(message: "description")
+Logging.w()
 ...
 
-Logging.e(message: "description")
+Logging.e()
 ...
      
 ```
