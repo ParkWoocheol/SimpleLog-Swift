@@ -26,7 +26,6 @@ public enum LogSeparator: String{
     case INFO = "📗 INFO "
     case WARN = "📒 WARN "
     case ERROR = "📕 ERROR"
-    case REFLECT = "🔓 REFLECT"
 }
 
 public class Logging{
