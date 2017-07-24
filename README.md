@@ -19,17 +19,32 @@ pod "SimpleLog-Swift"
 ```swift
 import SimpleLog_Swift
 
+#if DEBUG
+     Logging.isRunning = true
+#else
+     Logging.isRunning = false
+#endif
+
 // Print command line
-// | DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30, MESSAGE:
+// | 📘 DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30, MESSAGE:
 Logging.d()
 
 // Print command line
-// | DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30, MESSAGE: description
-Logging.d(message: "description")
+// | 📘 DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30, MESSAGE: description
+Logging.d(description)
 
 // Print command line
-// | DEBUG | TAG: TEST, FUNCTION: exampleFunction, LINE: 31, MESSAGE: description
-Logging.d(tag: "tag name", message: "description")
+// | 📘 DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30, MESSAGE: description
+// | 🗄 Array | Info -> [...], Size -> [...]
+// | 🔓 INDEX | 0
+// ---------------------------------------------------------
+// Variable Name -> [id], Variable Type -> [Optional<Int>], Value -> [Optional(123)]
+// ---------------------------------------------------------
+// | 🔓 INDEX | 1
+// ---------------------------------------------------------
+// Variable Name -> [id], Variable Type -> [Optional<Int>], Value -> [Optional(456)]
+// ---------------------------------------------------------
+Logging.d(array as Array<Any>)
 
 Logging.i(message: "description")
 ...
