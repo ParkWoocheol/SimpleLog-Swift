@@ -31,71 +31,96 @@ public enum LogSeparator: String{
 
 public class Logging{
     
+    public static var isRunning = false
+    
     public static func d(_ message: Any, file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
-    }
-    
-    public static func d(file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
-    }
-    
-    public static func d(_ target: Array<Any>, file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
-        printArrayInfoMessage(target, size: target.count)
-        for (index ,any) in target.enumerated() {
-            printIndexMessage(index)
-            mirror(any)
+        if isRunning {
+            printLogMessage(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
         }
     }
     
+    public static func d(file: String = #file, function: String = #function, line: Int = #line){
+        if isRunning {
+            printLogMessage(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+        }
+    }
+    
+    public static func d(_ target: Array<Any>, file: String = #file, function: String = #function, line: Int = #line){
+        if isRunning {
+            printLogMessage(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+            printArrayInfoMessage(target, size: target.count)
+            for (index ,any) in target.enumerated() {
+                printIndexMessage(index)
+                mirror(any)
+            }
+        }
+    }
     public static func i(_ message: Any, file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+        if isRunning {
+            printLogMessage(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+        }
     }
     
     public static func i(file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+        if isRunning {
+            printLogMessage(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+        }
     }
     
     public static func i(_ target: Array<Any>, file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
-        printArrayInfoMessage(target, size: target.count)
-        for (index ,any) in target.enumerated() {
-            printIndexMessage(index)
-            mirror(any)
+        if isRunning {
+            printLogMessage(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+            printArrayInfoMessage(target, size: target.count)
+            for (index ,any) in target.enumerated() {
+                printIndexMessage(index)
+                mirror(any)
+            }
         }
     }
     
     public static func w(_ message: Any, file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+        if isRunning {
+            printLogMessage(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+        }
     }
     
     public static func w(file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+        if isRunning {
+            printLogMessage(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+        }
     }
     
     public static func w(_ target: Array<Any>, file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
-        printArrayInfoMessage(target, size: target.count)
-        for (index ,any) in target.enumerated() {
-            printIndexMessage(index)
-            mirror(any)
+        if isRunning {
+            printLogMessage(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+            printArrayInfoMessage(target, size: target.count)
+            for (index ,any) in target.enumerated() {
+                printIndexMessage(index)
+                mirror(any)
+            }
         }
     }
     
     public static func e(_ message: Any, file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+        if isRunning {
+            printLogMessage(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+        }
     }
     
     public static func e(file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+        if isRunning {
+            printLogMessage(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+        }
     }
     
     public static func e(_ target: Array<Any>, file: String = #file, function: String = #function, line: Int = #line){
-        printLogMessage(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
-        printArrayInfoMessage(target, size: target.count)
-        for (index ,any) in target.enumerated() {
-            printIndexMessage(index)
-            mirror(any)
+        if isRunning {
+            printLogMessage(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+            printArrayInfoMessage(target, size: target.count)
+            for (index ,any) in target.enumerated() {
+                printIndexMessage(index)
+                mirror(any)
+            }
         }
     }
     
