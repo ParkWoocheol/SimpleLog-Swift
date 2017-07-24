@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'SimpleLog-Swift'
-s.version          = '0.6.1'
+s.version          = '1.0.0'
 s.summary          = 'Simple Log for Swift by Park, Woocheol'
 
 

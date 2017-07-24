@@ -18,53 +18,114 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //THE SOFTWARE.
 
+import Foundation
+
 
 public enum LogSeparator: String{
     case DEBUG = "📘 DEBUG"
     case INFO = "📗 INFO "
     case WARN = "📒 WARN "
     case ERROR = "📕 ERROR"
+    case REFLECT = "🔓 REFLECT"
 }
 
 public class Logging{
     
-    public static func d(_ message: Any..., file: String = #file, function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    public static func d(_ message: Any, file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func d(_ tag: String, message: Any...,function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .DEBUG, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
-    }
-
-    public static func i(_ message: Any..., file: String = #file, function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    public static func d(file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
     }
     
-    public static func i(_ tag: String, message: Any...,function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .INFO, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    public static func d(_ target: Array<Any>, file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .DEBUG, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+        printArrayInfoMessage(target, size: target.count)
+        for (index ,any) in target.enumerated() {
+            printIndexMessage(index)
+            mirror(any)
+        }
     }
     
-    public static func w(_ message: Any..., file: String = #file, function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    public static func i(_ message: Any, file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func w(_ tag: String, message: Any...,function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .WARN, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    public static func i(file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
     }
     
-    public static func e(_ message: Any..., file: String = #file, function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    public static func i(_ target: Array<Any>, file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .INFO, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+        printArrayInfoMessage(target, size: target.count)
+        for (index ,any) in target.enumerated() {
+            printIndexMessage(index)
+            mirror(any)
+        }
     }
     
-    public static func e(_ tag: String, message: Any...,function: String = #function, line: Int = #line){
-        logMessagePrint(separator: .ERROR, logMessage: "TAG: \(tag), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    public static func w(_ message: Any, file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
     }
     
-    public static func logMessagePrint(separator: LogSeparator,logMessage: Any...){
+    public static func w(file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+    }
+    
+    public static func w(_ target: Array<Any>, file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .WARN, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+        printArrayInfoMessage(target, size: target.count)
+        for (index ,any) in target.enumerated() {
+            printIndexMessage(index)
+            mirror(any)
+        }
+    }
+    
+    public static func e(_ message: Any, file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line), MESSAGE: \(message)")
+    }
+    
+    public static func e(file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+    }
+    
+    public static func e(_ target: Array<Any>, file: String = #file, function: String = #function, line: Int = #line){
+        printLogMessage(separator: .ERROR, logMessage: "FILE: \(file), FUNCTION: \(function), LINE: \(line)")
+        printArrayInfoMessage(target, size: target.count)
+        for (index ,any) in target.enumerated() {
+            printIndexMessage(index)
+            mirror(any)
+        }
+    }
+    
+    public static func printLogMessage(separator: LogSeparator,logMessage: Any){
         print("| \(separator.rawValue) | \(logMessage)")
     }
     
+    public static func printIndexMessage(_ index: Int){
+        print("| 🔓 INDEX | \(index)")
+    }
+    
+    public static func printArrayInfoMessage(_ target: Any, size: Int){
+        print("| 🗄 Array | Info -> [\(target)], Size -> [\(size)]")
+    }
+    
+    public static func mirror(_ target: Any){
+        print("---------------------------------------------------------")
+        let mirror = Mirror(reflecting: target)
+        for (variableName, value) in mirror.children {
+            guard let variableName = variableName else { continue }
+            print("Variable Name -> [\(variableName)], Variable Type -> [\(type(of : value))], Value -> [\(value)]")
+        }
+        print("---------------------------------------------------------")
+    }
+    
 }
+
+
+
+
 
 
 

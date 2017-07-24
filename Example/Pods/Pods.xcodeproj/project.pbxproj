@@ -484,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D02F0471DAB3C399552BCD908645D38F /* Pods-SimpleLog-Swift_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -605,6 +606,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C23CEF4DD82B32C79836592B57E2019F /* Pods-SimpleLog-Swift_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
