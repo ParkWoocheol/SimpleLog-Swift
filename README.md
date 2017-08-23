@@ -27,12 +27,14 @@ import SimpleLog_Swift
 
 // Print command line
 // | 📘 DEBUG | FILE: ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30
+// ---------------------------------------------------------
 Logging.d()
 
 // Print command line
 // | 📘 DEBUG | FILE: ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30
 // ---------------------------------------------------------
 // Variable Type -> [String], Value -> [description]
+// ---------------------------------------------------------
 Logging.d(description)
 
 // Print command line
