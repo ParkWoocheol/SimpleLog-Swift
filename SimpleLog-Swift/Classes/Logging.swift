@@ -133,10 +133,12 @@ public class Logging{
     
     public static func printLogMessage(separator: LogSeparator,logMessage: Any){
         print("| \(separator.rawValue) | \(logMessage)")
+        print("---------------------------------------------------------")
     }
     
     public static func printIndexMessage(_ index: Int){
         print("| 🔓 Index | \(index)")
+        print("---------------------------------------------------------")
     }
     
     public static func printArrayInfoMessage(_ target: Any, size: Int){
@@ -144,11 +146,16 @@ public class Logging{
     }
     
     public static func mirror(_ target: Any){
-        print("---------------------------------------------------------")
         let mirror = Mirror(reflecting: target)
-        for (variableName, value) in mirror.children {
-            guard let variableName = variableName else { continue }
-            print("Variable Name -> [\(variableName)], Variable Type -> [\(type(of : value))], Value -> [\(value)]")
+        if mirror.children.count != 0 {
+            print("\(mirror.subjectType)")
+            print("---------------------------------------------------------")
+            for (variableName, value) in mirror.children {
+                guard let variableName = variableName else { continue }
+                print("Variable Name -> [\(variableName)], Variable Type -> [\(type(of : value))], Value -> [\(value)]")
+            }
+        }else{
+            print("Variable Type -> [\(mirror.subjectType)], Value -> [\(target)]")
         }
         print("---------------------------------------------------------")
     }
