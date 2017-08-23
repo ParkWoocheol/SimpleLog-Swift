@@ -26,25 +26,32 @@ import SimpleLog_Swift
 #endif
 
 // Print command line
-// | 📘 DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30, MESSAGE:
+// | 📘 DEBUG | FILE: ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30
 Logging.d()
 
 // Print command line
-// | 📘 DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30, MESSAGE: description
+// | 📘 DEBUG | FILE: ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30
+// ---------------------------------------------------------
+// Variable Type -> [String], Value -> [description]
 Logging.d(description)
 
 // Print command line
-// | 📘 DEBUG | FILE: .../ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30, MESSAGE: description
+// | 📘 DEBUG | FILE: ExampleViewController.swift, FUNCTION: exampleFunction, LINE: 30
+// ---------------------------------------------------------
 // | 🗄 Array | Info -> [...], Size -> [...]
 // | 🔓 INDEX | 0
+// ---------------------------------------------------------
+// Example
 // ---------------------------------------------------------
 // Variable Name -> [id], Variable Type -> [Optional<Int>], Value -> [Optional(123)]
 // ---------------------------------------------------------
 // | 🔓 INDEX | 1
 // ---------------------------------------------------------
+// Example
+// ---------------------------------------------------------
 // Variable Name -> [id], Variable Type -> [Optional<Int>], Value -> [Optional(456)]
 // ---------------------------------------------------------
-Logging.d(array as Array<Any>)
+Logging.d(Array<Example> as Array<Any>)
 
 Logging.i()
 ...
