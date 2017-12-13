@@ -69,7 +69,7 @@ Logging.e()
 
 ## Author
 
-Woocheol Park, admin@mrparkwc.com
+Woocheol Park, mrparkwc@gmail.com
 
 ## License
 
